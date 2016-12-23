@@ -21,7 +21,7 @@ class ClientService
 
   def required_client_fields
     request_message = { Request: source_credentials_hash.merge(boilerplate_hash) }
-    #@savon_client.operation(:get_required_client_fields).build(message: request_message).to_s
+    # @savon_client.operation(:get_required_client_fields).build(message: request_message).to_s
     @savon_client.call(:get_required_client_fields, message: request_message)
   end
 
