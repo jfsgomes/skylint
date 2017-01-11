@@ -6,3 +6,7 @@ gem 'savon'
 gem 'pry'
 gem 'dotenv'
 gem "rake"
+
+group :test do
+  gem "rspec"
+end
