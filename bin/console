@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+if ! type bundle > /dev/null 2>&1; then
+  echo <<eos
+    The environment has not been set up yet. Make sure you run `bin/setup`
+    from the project root first.
+eos
+fi
+
+bundle exec pry -I ./lib -r mindbody
