@@ -5,6 +5,14 @@ require "spec_helper"
 require "mindbody/configuration"
 
 RSpec.describe Mindbody::Configuration do
+  describe "#site_ids" do
+    it "is an empty Array by default" do
+      config = described_class.new
+
+      expect(config.site_ids).to eq []
+    end
+  end
+
   describe "#source_name" do
     it "is empty by default" do
       config = described_class.new
@@ -21,6 +29,14 @@ RSpec.describe Mindbody::Configuration do
       config.source_name = source_name
 
       expect(config.source_name).to eq source_name
+    end
+  end
+
+  describe "#source_password" do
+    it "is empty by default" do
+      config = described_class.new
+
+      expect(config.source_password).to be_blank
     end
   end
 end
