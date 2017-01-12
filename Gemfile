@@ -8,5 +8,6 @@ gem 'dotenv'
 gem "rake"
 
 group :test do
+  gem "activesupport"
   gem "rspec"
 end
